@@ -119,6 +119,20 @@ Utiliza-se dessa forma:
     }
 ```
 
+#### If/else
+
+```css
+@mixin theme-collection($half-post: true) {
+    @include for-phone-only {
+        width: $full-width;
+    }
+    @if $half-post {
+        width: $half-width;
+    } @else {
+        width: $full-width;
+    }
+}
+```
 #### Imports
 ```
     @import 'header', 'footer', 'about', 'article', 'collection', 'contact';
